@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Auth System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard">
+            <h1>🎯 Dashboard</h1>
+            <p class="subtitle">Your secure dashboard</p>
+            
+            <div id="loading" class="loading">Loading user data...</div>
+            
+            <div id="dashboardContent" style="display: none;">
+                <div class="welcome" id="welcomeMessage"></div>
+                
+                <div class="user-info">
+                    <h3>User Information</h3>
+                    <p><strong>ID:</strong> <span id="userId"></span></p>
+                    <p><strong>Name:</strong> <span id="userName"></span></p>
+                    <p><strong>Email:</strong> <span id="userEmail"></span></p>
+                    <p><strong>Joined:</strong> <span id="userCreated"></span></p>
+                </div>
+                
+                <button class="btn logout-btn" onclick="logout()">Logout</button>
+            </div>
+            
+            <div class="error" id="error"></div>
+            
+            <div class="link-text" style="margin-top: 30px;">
+                <a href="index.html">← Back to Home</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
