@@ -35,6 +35,31 @@
             </div>
         </div>
     </div>
+
+    <div style="position: fixed; bottom: 10px; right: 10px; background: #f8f9fa; padding: 10px; border-radius: 5px; z-index: 1000;">
+  <button onclick="testConnection()" style="background: #007bff; color: white; border: none; padding: 5px 10px; border-radius: 3px; margin: 2px;">
+    Test Connection
+  </button>
+  <button onclick="refreshDashboard()" style="background: #28a745; color: white; border: none; padding: 5px 10px; border-radius: 3px; margin: 2px;">
+    Refresh
+  </button>
+  <button onclick="console.log('Token:', localStorage.getItem('token'), 'User:', localStorage.getItem('user'))" 
+          style="background: #6c757d; color: white; border: none; padding: 5px 10px; border-radius: 3px; margin: 2px;">
+    Debug Info
+  </button>
+</div>
+
+<script>
+async function testConnection() {
+  try {
+    const response = await fetch('/health');
+    const data = await response.json();
+    alert(`✅ Server is running!\nStatus: ${data.status}\nTime: ${data.timestamp}`);
+  } catch (error) {
+    alert(`❌ Cannot connect to server:\n${error.message}`);
+  }
+}
+</script>
     
     <script src="js/dashboard.js"></script>
 </body>
