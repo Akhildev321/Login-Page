@@ -4,7 +4,7 @@ A complete authentication system built with Node.js, Express, MySQL, and modern 
 
 ## 🌐 Live Demo
 **Public URL**: `https://revulsionary-antoine-cephalalgic.ngrok-free.dev`  
-*(Note: Ngrok URL changes each session. Check latest in server logs)*
+**Server at Sleep**
 
 **Test Credentials**:  
 - Email: `test@example.com`  
